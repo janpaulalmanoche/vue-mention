@@ -82,9 +82,7 @@ export default defineComponent({
     const searchText = ref<string>(null)
 
     watch(searchText, (value, oldValue) => {
-      if (value) {
         emit('search', value, oldValue)
-      }
     })
 
     const filteredItems = computed(() => {
